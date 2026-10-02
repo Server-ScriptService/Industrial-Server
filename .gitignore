@@ -406,3 +406,11 @@ Makefile
 *.swo
 *.swn
 /build/compile_commands.json
+build/
+.vscode/
+cmake-build-*/
+.idea/
+*.exe
+*.obj
+*.o
+*.pdb
