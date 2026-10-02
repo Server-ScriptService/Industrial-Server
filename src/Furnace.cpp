@@ -29,11 +29,14 @@ void Furnace::render() const {
     DrawRectangle(posX, posY, 100, 100, GRAY);
 
     // Text
+    Font& globalFont = AssetManager::globalFont;
     std::string oreText = std::format("Iron ore: {}", ironOre);
-    DrawTextEx(AssetManager::globalFont, oreText.c_str(), Vector2 {
+    
+    DrawTextEx(globalFont, oreText.c_str(), Vector2 {
         static_cast<float>(posX - 10),
         static_cast<float>(BOTTOM)
     }, FONT_SIZE, 0.0f, WHITE);
+    DrawTextEx(globalFont, "Furnace", Vector2 {static_cast<float>(posX), static_cast<float>(posY) - 35.0f}, FONT_SIZE, 0.0f, WHITE);
 
     DrawRectangle(posX - 12, BOTTOM + 37, BAR_WIDTH, 30, GRAY);
     DrawRectangle(posX - 12, BOTTOM + 37, (tickProgress / TICK_DELAY_SECS) * BAR_WIDTH, 30, GREEN);
