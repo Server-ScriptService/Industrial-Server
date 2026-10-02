@@ -122,12 +122,14 @@ GENERATED += $(OBJDIR)/AssetManager.o
 GENERATED += $(OBJDIR)/Furnace.o
 GENERATED += $(OBJDIR)/GameData.o
 GENERATED += $(OBJDIR)/HUD.o
+GENERATED += $(OBJDIR)/Renderer.o
 GENERATED += $(OBJDIR)/main.o
 GENERATED += $(OBJDIR)/utility.o
 OBJECTS += $(OBJDIR)/AssetManager.o
 OBJECTS += $(OBJDIR)/Furnace.o
 OBJECTS += $(OBJDIR)/GameData.o
 OBJECTS += $(OBJDIR)/HUD.o
+OBJECTS += $(OBJDIR)/Renderer.o
 OBJECTS += $(OBJDIR)/main.o
 OBJECTS += $(OBJDIR)/utility.o
 
@@ -203,6 +205,9 @@ $(OBJDIR)/GameData.o: src/GameData.cpp
 	@echo "$(notdir $<)"
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/HUD.o: src/HUD.cpp
+	@echo "$(notdir $<)"
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/Renderer.o: src/Renderer.cpp
 	@echo "$(notdir $<)"
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/main.o: src/main.cpp

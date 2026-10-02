@@ -14,5 +14,4 @@ class Furnace {
 		float tickProgress = 0.0f;
 
     	void update(const float deltaTime, GameData& data);
-		void render() const;
 };

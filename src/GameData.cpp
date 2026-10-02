@@ -1,5 +1,5 @@
 #include "GameData.h"
-#include <cmath>
+#include <algorithm>
 
 int GameData::GetIronPlates() const {
     return ironPlates;

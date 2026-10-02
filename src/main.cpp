@@ -1,6 +1,7 @@
 #include "AssetManager.h"
 #include "HUD.h"
 #include "Furnace.h"
+#include "Renderer.h"
 
 #include <vector>
 
@@ -22,7 +23,7 @@ int main() {
 
 		for (Furnace& furnace : furnaces) {
             furnace.update(deltaTime, data);
-            furnace.render();
+            Renderer::RenderFurnace(furnace);
 		}
 
         DrawHUD(data);
